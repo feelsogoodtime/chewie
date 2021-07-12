@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math' as math;
 import 'dart:ui' as ui;
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:chewie/src/animated_play_pause.dart';
 import 'package:chewie/src/center_play_button.dart';
 import 'package:chewie/src/chewie_player.dart';
@@ -170,9 +171,8 @@ class _CupertinoControlsState extends State<CupertinoControls>
                         Container(
                           width: 10,
                         ),
-                        Image.asset(
-                          'assets/img/badge.png',
-                          //
+                        CachedNetworkImage(
+                          imageUrl: 'https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg',
                           fit: BoxFit.cover,
                         ),
                       ],
